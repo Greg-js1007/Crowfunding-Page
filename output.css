@@ -41,4 +41,31 @@ body {
   color: white;
 }
 
+main {
+  width: auto;
+  height: auto;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .crowdfunding-product-container {
+  width: 50%;
+  height: auto;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -80px;
+}
+main .crowdfunding-product-container .logo-mastercraft-container {
+  width: auto;
+  height: auto;
+}
+
 /*# sourceMappingURL=output.css.map */

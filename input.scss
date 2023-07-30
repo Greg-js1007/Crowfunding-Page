@@ -20,6 +20,12 @@ $Dark-cyan: hsl(176, 72%, 28%);
 
 $Black: hsl(0, 0%, 0%);
 $Dark-gray: hsl(0, 0%, 48%);
+@mixin flex($direction,$content, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
 
 .hero-container{
     width: 100%;
@@ -52,6 +58,28 @@ $Dark-gray: hsl(0, 0%, 48%);
         .nav-ul-container li a{
             text-decoration: none;
             color: white;
+        }
+    }
+}
+main{
+    width: auto;
+    height: auto;
+    display: flex;
+    @include flex(column,center ,center);
+    .crowdfunding-product-container{
+        width: 50%;
+        height: auto;
+        border: 1px solid #000;
+        border-radius: 8px;
+        background-color: #fff;
+        @include flex(column,center ,center );
+        position: relative;
+        top: -80px;
+        .logo-mastercraft-container{
+            width: 50%;
+            height: auto;
+            position: absolute;
+            top: 90px;
         }
     }
 }
