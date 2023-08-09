@@ -20,11 +20,17 @@ $Dark-cyan: hsl(176, 72%, 28%);
 
 $Black: hsl(0, 0%, 0%);
 $Dark-gray: hsl(0, 0%, 48%);
-@mixin flex($direction,$content, $align){
+@mixin flex($direction,$content,$align){
     display: flex;
     flex-direction: $direction;
     justify-content: $content;
     align-items: $align;
+}
+@mixin Grid($justify,$align, $items){
+    display: grid;
+    justify-content: $justify;
+    align-content: $align;
+    justify-items: $items;
 }
 
 .hero-container{
@@ -64,22 +70,135 @@ $Dark-gray: hsl(0, 0%, 48%);
 main{
     width: auto;
     height: auto;
-    display: flex;
     @include flex(column,center ,center);
+    background-color: hsla(0, 2%, 84%, 0.753);
     .crowdfunding-product-container{
         width: 50%;
         height: auto;
-        border: 1px solid #000;
+        border: 1px solid none;
         border-radius: 8px;
         background-color: #fff;
-        @include flex(column,center ,center );
+        @include Grid(center,center, center);
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: 20% 40% 40%;
         position: relative;
         top: -80px;
         .logo-mastercraft-container{
-            width: 50%;
+            width: auto;
             height: auto;
-            position: absolute;
-            top: 90px;
+            position: relative;
+            top: -27px;
         }
+        .info-product{
+            @include flex(column,center,center);
+            padding-bottom: 1.25rem;
+            gap: 0.625rem;
+
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 0.875rem;
+                color: $Dark-gray;
+            }
+        }
+        .buttons-container{
+            width: 100%;
+            height: 10vh;
+            @include flex(row,space-around,center);
+            button{
+                width: auto;
+                height: 2.644rem;
+                padding: 1.25rem;
+                border-radius: 1.25rem;
+                border: none;
+                text-align: center;
+                background-color: $Moderate-cyan;
+                color: #fff;
+                @include flex(row,center,center );
+                p{
+                    text-align: center;
+                }
+            }
+            button:nth-child(3){
+                background-color: hsla(0, 2%, 84%, 0.753);
+                color: $Black;
+                width: 7.8rem;
+                p{
+                    padding-left: 1.563rem;
+                }
+            }
+            figure{
+                width: auto;
+                height: auto;
+                position: relative;
+                left: 165px;
+                img{
+                    width: 3.1vw;
+                    height: auto;
+                }
+            }
+        }
+    
+    }
+    .crowfunding-statistics-container{
+        width: 50%;
+        height: auto;
+        border: 1px solid none;
+        border-radius: 8px;
+        background-color: #fff;
+        @include Grid(center,center, center);
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: 2fr 1fr;
+        gap: 1.25rem;
+        padding: 1rem;
+        
+        .statistics{
+            @include Grid(center,center,center);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            width: 100%;
+            height: 100%;
+            padding-top: 1.25rem;
+            gap: 1.25rem;
+            width: 80%;
+            .statistics-info{
+                @include Grid(center,center ,center);
+                padding: 0 0.625rem;
+                width: 100%;
+                p:nth-child(1){
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    padding-bottom: 0.625rem;
+                }
+                p:nth-child(2){
+                    font-size: 0.875rem;
+                }
+            }
+            .statistics-info:nth-child(2){
+                border-left: 1px solid $Dark-gray;
+            }
+            .statistics-info:nth-child(3){
+                border-left: 1px solid $Dark-gray;
+            }
+        }
+        .bar-progress{
+            width: 100%;
+            height: 2rem;
+            @include flex(column,center,center );
+            .bar-progress-container{
+            width: 80%;
+            height:0.625rem;
+            background-color: hsla(0, 2%, 84%, 0.753);
+            border-radius: 1.25rem;
+                .bar-progress{
+                    width: 75%;
+                    height: 100%;
+                    background-color: $Moderate-cyan;
+                    border-radius: 1.25rem;
+                }
+            }
+        }
+        
     }
 }

@@ -45,27 +45,159 @@ main {
   width: auto;
   height: auto;
   display: flex;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: hsla(0, 2%, 84%, 0.753);
 }
 main .crowdfunding-product-container {
   width: 50%;
   height: auto;
-  border: 1px solid #000;
+  border: 1px solid none;
   border-radius: 8px;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: 20% 40% 40%;
   position: relative;
   top: -80px;
 }
 main .crowdfunding-product-container .logo-mastercraft-container {
   width: auto;
   height: auto;
+  position: relative;
+  top: -27px;
+}
+main .crowdfunding-product-container .info-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  gap: 0.625rem;
+}
+main .crowdfunding-product-container .info-product h1 {
+  font-size: 1.5rem;
+}
+main .crowdfunding-product-container .info-product p {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 48%);
+}
+main .crowdfunding-product-container .buttons-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+main .crowdfunding-product-container .buttons-container button {
+  width: auto;
+  height: 2.644rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: none;
+  text-align: center;
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .crowdfunding-product-container .buttons-container button p {
+  text-align: center;
+}
+main .crowdfunding-product-container .buttons-container button:nth-child(3) {
+  background-color: hsla(0, 2%, 84%, 0.753);
+  color: hsl(0, 0%, 0%);
+  width: 7.8rem;
+}
+main .crowdfunding-product-container .buttons-container button:nth-child(3) p {
+  padding-left: 1.563rem;
+}
+main .crowdfunding-product-container .buttons-container figure {
+  width: auto;
+  height: auto;
+  position: relative;
+  left: 165px;
+}
+main .crowdfunding-product-container .buttons-container figure img {
+  width: 3.1vw;
+  height: auto;
+}
+main .crowfunding-statistics-container {
+  width: 50%;
+  height: auto;
+  border: 1px solid none;
+  border-radius: 8px;
+  background-color: #fff;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: 2fr 1fr;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+main .crowfunding-statistics-container .statistics {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.25rem;
+  gap: 1.25rem;
+  width: 80%;
+}
+main .crowfunding-statistics-container .statistics .statistics-info {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding: 0 0.625rem;
+  width: 100%;
+}
+main .crowfunding-statistics-container .statistics .statistics-info p:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 0.625rem;
+}
+main .crowfunding-statistics-container .statistics .statistics-info p:nth-child(2) {
+  font-size: 0.875rem;
+}
+main .crowfunding-statistics-container .statistics .statistics-info:nth-child(2) {
+  border-left: 1px solid hsl(0, 0%, 48%);
+}
+main .crowfunding-statistics-container .statistics .statistics-info:nth-child(3) {
+  border-left: 1px solid hsl(0, 0%, 48%);
+}
+main .crowfunding-statistics-container .bar-progress {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .crowfunding-statistics-container .bar-progress .bar-progress-container {
+  width: 80%;
+  height: 0.625rem;
+  background-color: hsla(0, 2%, 84%, 0.753);
+  border-radius: 1.25rem;
+}
+main .crowfunding-statistics-container .bar-progress .bar-progress-container .bar-progress {
+  width: 75%;
+  height: 100%;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 1.25rem;
 }
 
 /*# sourceMappingURL=output.css.map */
