@@ -5,6 +5,8 @@
 }
 
 body{
+    width: 100%;
+    height: auto;
     font-size: 62.5%;
     font-family: 'Commissioner', sans-serif;
 }
@@ -26,11 +28,11 @@ $Dark-gray: hsl(0, 0%, 48%);
     justify-content: $content;
     align-items: $align;
 }
-@mixin Grid($justify,$align, $items){
+@mixin Grid($justify-c,$align-c, $justify-i){
     display: grid;
-    justify-content: $justify;
-    align-content: $align;
-    justify-items: $items;
+    justify-content: $justify-c;
+    align-content: $align-c;
+    justify-items: $justify-i;
 }
 
 .hero-container{
@@ -68,26 +70,31 @@ $Dark-gray: hsl(0, 0%, 48%);
     }
 }
 main{
-    width: auto;
+    width: 100%;
     height: auto;
-    @include flex(column,center ,center);
+    @include Grid(center,center,center);
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% auto auto;
     background-color: hsla(0, 2%, 84%, 0.753);
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
     .crowdfunding-product-container{
         width: 50%;
         height: auto;
-        border: 1px solid none;
         border-radius: 8px;
         background-color: #fff;
         @include Grid(center,center, center);
         grid-template-columns: repeat(1, 100%);
-        grid-template-rows: 20% 40% 40%;
+        grid-template-rows: 20% 40% 40% ;
         position: relative;
         top: -80px;
+        padding: 1rem 0;
         .logo-mastercraft-container{
             width: auto;
             height: auto;
             position: relative;
-            top: -27px;
+            top: -46px;
         }
         .info-product{
             @include flex(column,center,center);
@@ -116,6 +123,7 @@ main{
                 background-color: $Moderate-cyan;
                 color: #fff;
                 @include flex(row,center,center );
+                cursor: pointer;
                 p{
                     text-align: center;
                 }
@@ -136,7 +144,9 @@ main{
                 img{
                     width: 3.1vw;
                     height: auto;
+                    cursor: pointer;
                 }
+                
             }
         }
     
@@ -199,6 +209,93 @@ main{
                 }
             }
         }
-        
     }
+    .about-project-container{
+        width: 50%;
+        height: auto;
+        border-radius: 8px;
+        background-color: #fff;
+        @include flex(column,center,center);
+        gap: 1.25rem;
+        padding: 1.25rem;
+        .info-project{
+            height: auto;
+            width: 100%;
+            h2{
+                font-size: 1.125rem;
+                padding: 1.25rem 0;
+            }
+            p{
+                font-size: .975rem;
+                padding-bottom: 1.25rem;
+                line-height: 25px;
+                color: $Dark-gray;
+            }
+        }
+        .card-container{
+            width: 100%;
+            height: auto;
+            border: 1px solid $Dark-gray;
+            border-radius: 8px;
+            padding: 15px;
+            .info-card{
+                @include flex(row,space-between,center );
+                padding: 0.938rem 0;
+                p:nth-child(1){
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    color: #000;
+                }
+                p{
+                    color: $Moderate-cyan;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                }
+            }
+            p{
+                font-size: .975rem;
+                color: $Dark-gray;
+                line-height: 25px;
+            }
+            .price-select-card{
+                padding: .938rem 0;
+                @include flex(row, space-between,center );
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #000;
+                    span{
+                        color: $Dark-gray;
+                        font-size: .975rem;
+                        position: relative;
+                        top: -3px;
+                    }
+                }
+                button{
+                width: auto;
+                height: 2.644rem;
+                padding: 1.25rem;
+                border-radius: 1.25rem;
+                border: none;
+                text-align: center;
+                background-color: $Moderate-cyan;
+                @include flex(row,center,center );
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .card-container:nth-child(4){
+            opacity: .5;
+            .price-select-card:nth-child(3){
+                button{
+                    background-color: $Dark-gray;
+                }
+            }
+        }
+    }   
 }

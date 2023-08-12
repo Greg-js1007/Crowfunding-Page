@@ -5,6 +5,8 @@
 }
 
 body {
+  width: 100%;
+  height: auto;
   font-size: 62.5%;
   font-family: "Commissioner", sans-serif;
 }
@@ -42,18 +44,22 @@ body {
 }
 
 main {
-  width: auto;
+  width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% auto auto;
   background-color: hsla(0, 2%, 84%, 0.753);
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
 }
 main .crowdfunding-product-container {
   width: 50%;
   height: auto;
-  border: 1px solid none;
   border-radius: 8px;
   background-color: #fff;
   display: grid;
@@ -64,12 +70,13 @@ main .crowdfunding-product-container {
   grid-template-rows: 20% 40% 40%;
   position: relative;
   top: -80px;
+  padding: 1rem 0;
 }
 main .crowdfunding-product-container .logo-mastercraft-container {
   width: auto;
   height: auto;
   position: relative;
-  top: -27px;
+  top: -46px;
 }
 main .crowdfunding-product-container .info-product {
   display: flex;
@@ -107,6 +114,7 @@ main .crowdfunding-product-container .buttons-container button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 main .crowdfunding-product-container .buttons-container button p {
   text-align: center;
@@ -128,6 +136,7 @@ main .crowdfunding-product-container .buttons-container figure {
 main .crowdfunding-product-container .buttons-container figure img {
   width: 3.1vw;
   height: auto;
+  cursor: pointer;
 }
 main .crowfunding-statistics-container {
   width: 50%;
@@ -198,6 +207,103 @@ main .crowfunding-statistics-container .bar-progress .bar-progress-container .ba
   height: 100%;
   background-color: hsl(176, 50%, 47%);
   border-radius: 1.25rem;
+}
+main .about-project-container {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+main .about-project-container .info-project {
+  height: auto;
+  width: 100%;
+}
+main .about-project-container .info-project h2 {
+  font-size: 1.125rem;
+  padding: 1.25rem 0;
+}
+main .about-project-container .info-project p {
+  font-size: 0.975rem;
+  padding-bottom: 1.25rem;
+  line-height: 25px;
+  color: hsl(0, 0%, 48%);
+}
+main .about-project-container .card-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid hsl(0, 0%, 48%);
+  border-radius: 8px;
+  padding: 15px;
+}
+main .about-project-container .card-container .info-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.938rem 0;
+}
+main .about-project-container .card-container .info-card p:nth-child(1) {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000;
+}
+main .about-project-container .card-container .info-card p {
+  color: hsl(176, 50%, 47%);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+main .about-project-container .card-container p {
+  font-size: 0.975rem;
+  color: hsl(0, 0%, 48%);
+  line-height: 25px;
+}
+main .about-project-container .card-container .price-select-card {
+  padding: 0.938rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .about-project-container .card-container .price-select-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+main .about-project-container .card-container .price-select-card p span {
+  color: hsl(0, 0%, 48%);
+  font-size: 0.975rem;
+  position: relative;
+  top: -3px;
+}
+main .about-project-container .card-container .price-select-card button {
+  width: auto;
+  height: 2.644rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: none;
+  text-align: center;
+  background-color: hsl(176, 50%, 47%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .about-project-container .card-container .price-select-card button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+main .about-project-container .card-container:nth-child(4) {
+  opacity: 0.5;
+}
+main .about-project-container .card-container:nth-child(4) .price-select-card:nth-child(3) button {
+  background-color: hsl(0, 0%, 48%);
 }
 
 /*# sourceMappingURL=output.css.map */
